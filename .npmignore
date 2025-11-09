@@ -1,0 +1,13 @@
+.github/
+core/
+my_basic_mac.xcodeproj/
+output/
+resource/
+sample/
+shell/
+clean.cmd
+donate.html
+MY-BASIC Quick Reference.pdf
+my_basic.sln
+my_basic.vcproj
+_config.yml
