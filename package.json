@@ -1,6 +1,6 @@
 {
   "name": "my_basic.c",
-  "version": "1.2025.4",
+  "version": "1.2025.5",
   "description": "A lightweight BASIC interpreter written in standard C in dual files. Aims to be embeddable, extendable and portable; Tony Wang (2014).",
   "keywords": [
     "c",
@@ -19,5 +19,9 @@
     "url": "git+https://github.com/nodef/my_basic.c.git"
   },
   "license": "MIT",
-  "main": "my_basic.h"
+  "author": "wolfram77@gmail.com",
+  "main": "my_basic.h",
+  "scripts": {
+    "test": "bash build.sh test"
+  }
 }

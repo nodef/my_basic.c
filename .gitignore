@@ -1,9 +1,6 @@
-# Library files
-my_basic
-my_basic.h
-
-# Build directory
+# Build artifacts
 .build/
+*.exe
 
 # Logs
 logs

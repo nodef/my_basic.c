@@ -1,5 +1,5 @@
 ~~~~~~~~~~
- _____ __ __     _____ _____ _____ _____ _____ 
+ _____ __ __     _____ _____ _____ _____ _____
 |     |  |  |___| __  |  _  |   __|     |     |
 | | | |_   _|___| __ -|     |__   |-   -|   --|
 |_|_|_| |_|     |_____|__|__|_____|_____|_____|
@@ -11,6 +11,8 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 [Web playground](https://my-basic.github.io/playground/output/index.html)
+
+<br>
 
 ## Contents
 
@@ -26,31 +28,55 @@
 - [Wiki](#wiki)
 - [Donate](#donate)
 
+<br>
+
 ## Introduction
 
 MY-BASIC is a lightweight BASIC interpreter written in standard C in dual files, by [Tony Wang](https://github.com/paladin-t). It aims to be embeddable, extendable and portable. It is a dynamic typed programming language, reserves structured syntax, supports a style of [prototype-based programming](https://en.wikipedia.org/wiki/Prototype-based_programming) (OOP), also implements a functional paradigm by [lambda abstraction](https://en.wikipedia.org/wiki/Anonymous_function). The core is written in a C source file and an associated header file. It's easy to either use it as a standalone interpreter or embed it with existing projects in C, C++, Java, Objective-C, Swift, C#, etc. and totally customizable by adding your own scripting interface.
 
+<br>
+
 ## Installation
 
 Run:
-```bash
+
+```sh
 $ npm i my_basic.c
 ```
 
 And then include `my_basic.h` as follows:
+
 ```c
-#include "node_modules/my_basic.c/core/my_basic.h"
+// main.c
+#include "node_modules/my_basic.c/my_basic.h"
+
+int main() { /* ... */ }
 ```
 
-You may also want to include `my_basic.c` as follows:
-```c
-#ifndef __MY_BASIC_C__
-#define __MY_BASIC_C__
-#include "node_modules/my_basic.c/core/my_basic.c"
-#endif
+And then compile with `clang` or `gcc` as usual.
+
+```bash
+$ clang main.c  # or, use gcc
+$ gcc   main.c
 ```
 
-This will include both the function declaration and their definitions into a single file.
+You may also use a simpler approach:
+
+```c
+// main.c
+#include <my_basic.h>
+
+int main() { /* ... */ }
+```
+
+If you add the path `node_modules/my_basic.c` to your compiler's include paths.
+
+```bash
+$ clang -I./node_modules/my_basic.c main.c  # or, use gcc
+$ gcc   -I./node_modules/my_basic.c main.c
+```
+
+<br>
 
 ## Main features
 
@@ -84,6 +110,8 @@ Get [BASIC8](https://paladin-t.github.io/b8/) - the **Fantasy Computer** powered
 
 See awesome [user creations](https://my-basic.github.io/awesome/).
 
+<br>
+
 ## BASIC at a glance
 
 A "Hello World" convention in MY-BASIC:
@@ -99,6 +127,8 @@ print greeting("Hello", "world");
 ~~~~~~~~~~
 
 Read the [MY-BASIC Quick Reference](https://paladin-t.github.io/my_basic/MY-BASIC%20Quick%20Reference.pdf) to get details about how to program in MY-BASIC.
+
+<br>
 
 ## Installation
 
@@ -129,6 +159,8 @@ You can [link with MY-BASIC as a lib](https://github.com/paladin-t/my_basic/wiki
 
 For details about using MY-BASIC after integration, see [MY-BASIC Quick Reference](https://paladin-t.github.io/my_basic/MY-BASIC%20Quick%20Reference.pdf) and read the [Wiki](#wiki) pages.
 
+<br>
+
 ## [Interpreter workflow diagram](https://github.com/paladin-t/my_basic/wiki/Interpreter-workflow-diagram)
 
 MY-BASIC's workflow diagram can be concluded in a single image.
@@ -153,6 +185,8 @@ int main() {
 	return 0;
 }
 ~~~~~~~~~~
+
+<br>
 
 ## [Wiki](https://github.com/paladin-t/my_basic/wiki)
 
@@ -206,6 +240,8 @@ The manual explains most of the fundamental topics, however it doesn't cover eve
 * [FAQ](https://github.com/paladin-t/my_basic/wiki/FAQ)
 	* [Is it possible to introduce another feature](https://github.com/paladin-t/my_basic/wiki/Is-it-possible-to-introduce-another-feature)
 
+<br>
+
 ## Donate
 
 [List of donors](http://paladin-t.github.io/my_basic/donate.html).
@@ -222,6 +258,6 @@ One-off [donation](http://paladin-t.github.io/my_basic/donate.html) via PayPal.
 <br>
 
 
+[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/paladin-t/my_basic)
 [![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
 ![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/my_basic.c)
-[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/paladin-t/my_basic)
